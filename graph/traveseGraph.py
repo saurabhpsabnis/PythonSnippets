@@ -42,9 +42,11 @@ def dfs(g):
                         visited[node] = True
                         for i in g.graphVtxs[node]:
                             stack.append(i.end)
+        print
     
 
 if __name__ == '__main__':
+    #indirected graph example
     g = graph.Graph(False)
     g.add_edge('c', 'd', 3)
     g.add_edge('a', 'd', 5)
@@ -59,3 +61,15 @@ if __name__ == '__main__':
     g.printAdjcList()
     bfs(g)
     dfs(g) 
+    #directed graph example
+    gr = graph.Graph(True)
+    gr.add_edge(5, 6)
+    gr.add_edge(3, 6)
+    gr.add_edge(1, 3)
+    gr.add_edge(1, 5)
+    gr.add_edge(5, 4)
+    gr.add_edge(5, 6)
+    gr.add_edge(5, 2)
+    gr.printAdjcList()
+    bfs(gr)
+    dfs(gr)
