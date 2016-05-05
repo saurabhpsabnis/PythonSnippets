@@ -1,3 +1,4 @@
+from macpath import isabs
 
 #Sorting Algorithms to sort a given list in ascending order
 #Auther : Saurabh P Sabnis 
@@ -109,6 +110,13 @@ def heap_sort(ll):
         min_heapify(ll,0)
     return sortedList
 
+def isArraySorted(ll):
+    "Return True if passed array is sorted"
+    if len(ll) == 1:
+        return True
+    else:
+        return (ll[0] <= ll[1]) and (isArraySorted(ll[1:]))
+
 if __name__ == '__main__':
     temp = [5,86,69,73,11,17,1,74,34,3]
     print "bubble sort " + str(bubble_sort(temp))
@@ -122,4 +130,9 @@ if __name__ == '__main__':
     print "Merge Sort" + str(mearge_sort(temp))
     temp = [5,86,69,73,11,17,1,74,34,3]
     print "Heap sort" + str(heap_sort(temp))
+    temp = heap_sort(temp)
+    print " Case 1: Is passed array sorted : " + str(isArraySorted(temp))
+    temp = [5,86,69,73,11,17,1,74,34,3]
+    print " Case 2: Is passed array sorted : " + str(isArraySorted(temp))
+    print [5 + i for i in range(1,5)]
 
