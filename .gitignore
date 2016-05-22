@@ -1,0 +1,9 @@
+*.pyc
+*.project
+*.pydevproject
+*.cbp
+*.depend
+*.layout
+obj/*
+bin/*
+
