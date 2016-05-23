@@ -3,7 +3,6 @@ Created on May 10, 2016
 
 @author: amolsaurabh
 '''
-from _dbus_bindings import String
 
 
 

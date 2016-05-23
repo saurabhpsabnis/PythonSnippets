@@ -1,4 +1,4 @@
-from macpath import isabs
+
 
 #Sorting Algorithms to sort a given list in ascending order
 #Auther : Saurabh P Sabnis 
@@ -134,5 +134,4 @@ if __name__ == '__main__':
     print " Case 1: Is passed array sorted : " + str(isArraySorted(temp))
     temp = [5,86,69,73,11,17,1,74,34,3]
     print " Case 2: Is passed array sorted : " + str(isArraySorted(temp))
-    print [5 + i for i in range(1,5)]
 
